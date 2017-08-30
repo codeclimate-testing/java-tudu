@@ -1,0 +1,82 @@
+<project name="spring-par-la-pratique" default="dist" basedir=".">
+	<description>"Spring par la pratique" book build file</description>
+	<!-- set global properties for this build -->
+	<property name="tuduDir" location="${basedir}/../tudu2" />
+	<property name="build" location="build" />
+	<property name="classes" location="${build}/build/classes" />
+	<property name="JavaSource" location="${build}/JavaSource" />
+	<property name="Tests" location="${build}/Tests" />
+	<property name="WebContent" location="${build}/WebContent" />
+
+	<path id="classpath">
+		<!-- In order to download and copy the librairies in the WEB-INF/lib directory, 
+					do a "mvn war:inplace" in the tudu-dwr module -->
+		<fileset dir="${WebContent}/WEB-INF/lib/">
+			<include name="*.jar" />
+		</fileset>
+		<fileset dir="lib/">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+
+	<target name="init">
+		<echo>Initialize the project : copy the files and directories from the Maven projects.</echo>
+		<!-- Create the time stamp -->
+		<tstamp />
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${build}" />
+
+		<mkdir dir="${JavaSource}" />
+		<copy todir="${JavaSource}">
+			<fileset dir="${tuduDir}/tudu-core/src/main/java" />
+		</copy>
+		<copy todir="${JavaSource}">
+			<fileset dir="${tuduDir}/tudu-core/src/main/resources" />
+		</copy>
+		<copy todir="${JavaSource}">
+			<fileset dir="${tuduDir}/tudu-presentation/tudu-dwr/src/main/java" />
+		</copy>
+		<copy todir="${JavaSource}">
+			<fileset dir="${tuduDir}/tudu-presentation/tudu-dwr/src/main/resources" />
+		</copy>
+
+		<mkdir dir="${Tests}" />
+		<copy todir="${Tests}">
+			<fileset dir="${basedir}/src/test/java" />
+		</copy>
+		<copy todir="${Tests}">
+			<fileset dir="${tuduDir}/tudu-core/src/test/java" />
+		</copy>
+		<copy todir="${Tests}">
+			<fileset dir="${tuduDir}/tudu-presentation/tudu-dwr/src/test/java" />
+		</copy>
+		<copy todir="${build}">
+			<fileset dir="lib" />
+		</copy>
+
+		<mkdir dir="${WebContent}" />
+		<copy todir="${WebContent}">
+			<fileset dir="${tuduDir}/tudu-presentation/tudu-dwr/src/main/webapp" />
+		</copy>
+	</target>
+
+	<target name="compile" depends="init" description="compile the source ">
+		<echo>Compile the project</echo>
+		<mkdir dir="${build}/build/classes" />
+		<javac source="1.5" target="1.5" srcdir="${JavaSource}" destdir="${classes}">
+			<classpath refid="classpath" />
+		</javac>
+		<javac source="1.5" target="1.5" srcdir="${Tests}" destdir="${classes}">
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+
+	<target name="dist" depends="compile" description="generate the distribution">
+		<echo>Package the project</echo>
+	</target>
+
+	<target name="clean" description="clean up">
+		<delete dir="${build}" />
+	</target>
+</project>
+

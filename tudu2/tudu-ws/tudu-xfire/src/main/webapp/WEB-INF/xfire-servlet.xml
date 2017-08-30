@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- XFire Web Service remoting -->
+	<bean name="/TuduListsWebService" parent="xfireServiceTemplate">
+		<property name="serviceBean">
+			<ref bean="tuduListsWebService" />
+		</property>
+		<property name="serviceInterface">
+			<value>tudu.web.ws.TuduListsWebService</value>
+		</property>
+	</bean>
+
+	<bean id="xfireServiceTemplate"
+		class="org.codehaus.xfire.spring.remoting.XFireExporter"
+		abstract="true">
+		<property name="serviceFactory" ref="xfire.serviceFactory" />
+		<property name="xfire" ref="xfire" />
+		<property name="style" value="document" />
+		<property name="use" value="literal" />
+	</bean>
+</beans>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Tudu Lists">
+	<bannerLeft>
+		<name>Tudu Lists</name>
+		<src>images/tudu_logo.png</src>
+		<href>http://tudu.sourceforge.net/</href>
+	</bannerLeft>
+	<bannerRight>
+		<name>SourceForge</name>
+		<src>http://sourceforge.net/sflogo.php?group_id=131842&amp;type=1</src>
+		<href>http://sourceforge.net/projects/tudu</href>
+	</bannerRight>
+	<body>
+		<menu name="Spring par la pratique">
+			<item name="Special lecteurs" href="/lecteurs.html" />
+		</menu>
+		<menu name="Live site">
+			<item name="tudu.ess.ch" href="http://tudu.ess.ch" />
+		</menu>
+		<menu name="End-user documentation">
+			<item name="User management" href="/user_management.html" />
+			<item name="Using Todo Lists" href="/use_todo_lists.html" />
+			<item name="Using Todos" href="/use_todos.html" />
+		</menu>
+		<menu name="Installation documentation">
+		    <item name="Introduction" href="/installation_introduction.html" />
+			<item name="Downloads" href="https://sourceforge.net/project/showfiles.php?group_id=131842"/>
+			<item name="Database setup" href="/database_setup.html" />
+			<item name="Tomcat setup" href="/tomcat_setup.html" />
+			<item name="JBoss setup" href="/jboss_setup.html" />
+			<item name="Eclipse setup" href="/eclipse_setup.html" />
+		</menu>
+		<menu name="Development information">
+			<item name="Architecture" href="architecture.html" />
+			<item name="SourceForge summary" href="http://www.sourceforge.net/projects/tudu" />
+			<item name="Fisheye" href="http://fisheye3.cenqua.com/browse/tudu" />
+		</menu>
+        <menu ref="modules" />
+
+        ${reports}
+
+	</body>
+</project>

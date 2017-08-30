@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>tudu</groupId>
+		<artifactId>tudu-parent</artifactId>
+		<version>3.0</version>
+	</parent>
+	<artifactId>tudu-repository</artifactId>
+	<packaging>jar</packaging>
+	<name>Tudu Lists Repository</name>
+	<dependencies>
+		<dependency>
+			<groupId>tudu</groupId>
+			<artifactId>tudu-domain
+			</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>org.aspectj-library</artifactId>
+			<type>libd</type>
+			<version>1.6.2.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>org.hibernate.ejb-library
+			</artifactId>
+			<type>libd</type>
+			<version>3.3.2.GA</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>org.springframework.spring-library
+			</artifactId>
+			<type>libd</type>
+			<version>2.5.6.A</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>com.springsource.org.apache.commons.dbcp
+			</artifactId>
+			<version>1.2.2.osgi</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge.ehcache</groupId>
+			<artifactId>com.springsource.net.sf.ehcache
+			</artifactId>
+			<version>1.5.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mysql.jdbc</groupId>
+			<artifactId>com.springsource.com.mysql.jdbc
+			</artifactId>
+			<version>5.1.6</version>
+		</dependency>
+	</dependencies>
+</project>
+

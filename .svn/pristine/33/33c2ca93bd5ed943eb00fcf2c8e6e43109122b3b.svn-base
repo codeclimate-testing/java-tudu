@@ -1,0 +1,48 @@
+                                ----------
+                                Eclipse setup
+                                ---------
+                                Julien Dubois
+ 
+Eclipse setup
+
+* Introduction
+
+  Tudu Lists' official development platform is the {{{http://www.eclipse.org}Eclipse}} IDE. 
+  We have also been using {{{http://www.intellij.com/}Intellij IDEA}}, and you could probably 
+  develop Tudu Lists with any other Java editor, however we have decided that Eclipse is the 
+  official supported IDE, and we will focus exclusively on it. This means that Eclipse-specific 
+  configuration files will be stored in CVS, and none other.
+
+* Checking out the project from CVS
+
+  Go to the CVS perspective, and create a new repository location.  Use the following configuration :
+
+    * Host : tudu.cvs.sourceforge.net
+    
+    * Repository location : /cvsroot/tudu
+    
+    * user : anonymous
+  
+  Just select the HEAD (or the tag/branch you wish to work on), and right-click on "checkout".
+
+* Building the project
+
+  Once the project is checked out from CVS, you will need to run Maven in order to download 
+  the project's dependencies.
+
+  Install Maven 2 from {{http://maven.apache.org/}} and open a console into your Tudu Lists 
+  installation directory.
+  
+  Just type "mvn package war:inplace" to download all dependencies and create an exploded WAR 
+  of Tudu Lists.
+
+  Add an Eclipse "classpath variable", called "M2_REPO", which points to your Maven local 
+  repository (by default ~/.m2/repository). The Tudu Lists project should now compile in Eclipse.
+
+* Eclipse Web Tools Platform
+
+  The Eclipse Web Tools Platform (WTP) is an Eclipse plugin, available on the 
+  {{{http://www.eclipse.org}Eclipse website}}, which helps creating web applications. For instance, 
+  it adds JSP and XML support, and integrates with several application servers, including Tomcat and Geronimo.
+
+  We are officially supporting WTP, and will commit any relevant configuration files into CVS.

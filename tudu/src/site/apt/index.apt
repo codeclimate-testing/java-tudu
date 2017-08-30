@@ -1,0 +1,52 @@
+                                ----------
+                                Tudu Lists
+                                ---------
+                                Julien Dubois
+
+Welcome to the Tudu Lists development website
+
+  Tudu Lists is the example application for "Spring par la pratique".
+  
+  <<Note to French readers>> Si vous avez achete le livre, {{{/lecteurs.html}une page speciale lui est consacre}}.
+  
+  "(...) the authors commitment to providing a realistic sample application (rather than the
+  simplistic effort that mars many books), is shown by the fact that Tudu Lists has become a viable
+  open source project in its own right" -- Rod Johnson, Founder of the Spring Framework
+  
+[images/spring_par_la_pratique_small.gif] Spring par la pratique
+
+  "Spring par la pratique" is the first book on <<Spring 2.0>>, and the first <<French>> book on Spring.
+  
+  You can find it on :
+  
+  * {{{http://www.eyrolles.com/Accueil/Livre/9782212117103/}Eyrolles.com}}, with freely downloadable sample chapters
+  
+  * {{{http://www.amazon.fr/exec/obidos/ASIN/2212117108/qid%3D1143983756/402-3362501-0856112}Amazon.fr}}
+  
+  * {{{http://www.fnac.com/Shelf/article.asp?PRID=1824114&OrderInSession=1&Mn=1&SID=d5e28612-fc05-0395-cb7e-56453851cb78&TTL=220320062220&Origin=FnacFR&Ra=-1&To=0&Nu=1&UID=08f89e12b-9fe1-4eba-6670-1748acc85055&Fr=3}Fnac.com}} (It is also available in Fnac stores across France)
+
+Using Tudu Lists
+
+  Tudu Lists is an on-line application for managing todo lists. With Tudu Lists, 
+  todo lists can be easily accessed, edited and shared on the Web. It is a simple
+  but effective project management tool.
+
+  If you want to use Tudu Lists, go to {{http://tudu.ess.ch}}, which provides a 
+  free installation for everyone to use. Many thanks to {{{http://www.ess.ch}ESS Development AG}}
+  for this service.
+
+[images/view_todos.png] View Todos
+
+  If you want your very own installation of Tudu Lists, or if you are a programmer and want 
+  to see how Tudu Lists is developped, this website is the place to be.
+
+  If you want to install Tudu Lists :
+  
+    * All you need is JDK 5.0, Tomcat 5.5 and MySQL.
+
+  If you are a developer, you will be interested to know that :
+  
+    * Tudu Lists is heavily based on the {{{http://www.springframework.org/}Spring Framework}}.
+  
+    * Tudu Lists is an AJAX application, using the great {{{http://www.getahead.ltd.uk/dwr/}DWR Framework}}.
+

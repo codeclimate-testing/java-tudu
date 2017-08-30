@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- JBoss deployment descriptor -->
+<jboss-web>
+    <context-root>/tudu</context-root>
+    <resource-ref>
+        <res-ref-name>jdbc/tudu</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <jndi-name>java:/jdbc/tudu</jndi-name>
+    </resource-ref>
+</jboss-web>

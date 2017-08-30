@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+   "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<configuration>
+		<stop-on-errors>true</stop-on-errors>
+		<date-format>MM/dd/yyyy HH:mm</date-format>
+		<wildcard>true</wildcard>
+		<custom-converters>
+			<converter
+				type="tudu.web.ws.xfire.sdo.converter.dozer2.TodoCustomConverter">
+				<class-a>tudu.web.ws.xfire.sdo.WSTodo</class-a>
+				<class-b>tudu.domain.model.Todo</class-b>
+			</converter>
+		</custom-converters>
+	</configuration>
+
+	<mapping>
+		<class-a>tudu.web.ws.xfire.sdo.WSRole</class-a>
+		<class-b>tudu.domain.model.Role</class-b>
+	</mapping>
+
+	<mapping>
+		<class-a>tudu.web.ws.xfire.sdo.WSTodoList</class-a>
+		<class-b>tudu.domain.model.TodoList</class-b>
+		<field>
+			<a>todos</a>
+			<b>todos</b>
+			<a-hint>tudu.web.ws.xfire.sdo.WSTodo</a-hint>
+			<b-hint>tudu.domain.model.Todo</b-hint>
+		</field>
+	</mapping>
+
+	<mapping>
+		<class-a>tudu.web.ws.xfire.sdo.WSTodo</class-a>
+		<class-b>tudu.domain.model.Todo</class-b>
+	</mapping>
+
+	<!-- 
+		User.todoLists is not in WSUser
+	-->
+	<mapping>
+		<class-a>tudu.web.ws.xfire.sdo.WSUser</class-a>
+		<class-b>tudu.domain.model.User</class-b>
+		<field>
+			<a>roles</a>
+			<b>roles</b>
+			<a-hint>tudu.web.ws.xfire.sdo.WSRole</a-hint>
+			<b-hint>tudu.domain.model.Role</b-hint>
+		</field>
+	</mapping>
+
+</mappings>

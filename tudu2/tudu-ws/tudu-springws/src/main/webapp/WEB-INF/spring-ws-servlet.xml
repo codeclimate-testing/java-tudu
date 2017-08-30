@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+
+    <!-- Dynamic WSDL generation from the XML Schema -->
+    <bean id="tudu" class="org.springframework.ws.wsdl.wsdl11.DynamicWsdl11Definition">
+        <property name="builder">
+            <bean class="org.springframework.ws.wsdl.wsdl11.builder.XsdBasedSoap11Wsdl4jDefinitionBuilder">
+                <property name="schema" value="/WEB-INF/xsd/tudu-ws.xsd"/>
+                <property name="portTypeName" value="tudu"/>
+                <property name="locationUri" value="/tuduService/"/>
+            </bean>
+        </property>
+    </bean>
+
+    <!-- Mapping between request and Endpoint from Payload root element type  -->
+    <bean id="endpointMapping" class="org.springframework.ws.server.endpoint.mapping.PayloadRootQNameEndpointMapping">
+        <property name="mappings">
+            <props>
+                <prop key="{http://springws.ws.web.tudu}GetAllTuduListsRequest">tuduListEndpointDom4j</prop>
+                <prop key="{http://springws.ws.web.tudu}GetTuduRequest">getTuduEndpointDom4j</prop>
+            </props>
+        </property>
+        <property name="interceptors">
+            <list>
+                <ref local="securityInterceptor"/>
+                <ref local="validatingInterceptor"/>
+            </list>
+        </property>
+    </bean>
+
+    <!-- ********************************************************************
+     *                                                                      *
+     *                            ENDPOINTS                                 *
+     *                                                                      *
+     ******************************************************************** -->
+
+    <bean id="tuduListEndpointDom4j" class="tudu.web.ws.springws.endpoint.dom4j.TuduListEndpoint">
+        <property name="userManager" ref="userManager"/>
+    </bean>
+
+    <bean id="getTuduEndpointDom4j" class="tudu.web.ws.springws.endpoint.dom4j.GetTuduEndpoint">
+        <property name="todoListsManager" ref="todoListsManager"/>
+    </bean>
+
+
+    <!-- ********************************************************************
+     *                                                                      *
+     *                            INTERCEPTORS                              *
+     *                                                                      *
+     ******************************************************************** -->
+
+    <!-- Interceptor responsible of validate input and output XML payloat -->
+    <bean id="validatingInterceptor"
+          class="org.springframework.ws.soap.server.endpoint.interceptor.PayloadValidatingInterceptor">
+        <property name="schema" value="/WEB-INF/xsd/tudu-ws.xsd"/>
+        <property name="validateRequest" value="true"/>
+        <property name="validateResponse" value="true"/>
+    </bean>
+
+    <!-- WS-Securyty Interceptor  -->
+    <bean id="securityInterceptor" class="org.springframework.ws.soap.security.wss4j.Wss4jSecurityInterceptor">
+        <property name="validationActions" value="UsernameToken"/>
+        <property name="validationCallbackHandler" ref="acegiHandler"/>
+    </bean>
+
+
+    <!-- ********************************************************************
+     *                                                                      *
+     *                    ACEGI SECURITY CONFIGURATION                      *
+     *                                                                      *
+     ******************************************************************** -->
+    <bean id="acegiHandler"
+          class="org.springframework.ws.soap.security.wss4j.callback.acegi.AcegiPlainTextPasswordValidationCallbackHandler">
+        <property name="authenticationManager" ref="authenticationManager"/>
+    </bean>
+
+    <bean id="authenticationManager" class="org.acegisecurity.providers.ProviderManager">
+        <property name="providers">
+            <bean class="org.acegisecurity.providers.dao.DaoAuthenticationProvider">
+                <property name="userDetailsService" ref="userDetailsService"/>
+            </bean>
+        </property>
+    </bean>
+
+
+    <bean id="userDetailsService"
+          class="tudu.security.UserDetailsServiceImpl">
+        <property name="userManager" ref="userManager"/>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,42 @@
+<user>
+	<login>user</login>
+	<password>user</password>
+	<firstName>userFirstname</firstName>
+	<lastName>userLastname</lastName>
+	<email>user@user.com</email>
+	<creationDate>2007-01-01 00:00:00.0 EST</creationDate>
+	<todoLists>
+		<todoList>
+			<listId>listId1</listId>
+			<name>todoList1</name>
+			<todos>
+				<todo>
+					<todoId>todoId11</todoId>
+					<description>todo 11 description</description>
+					<priority>11</priority>
+				</todo>
+				<todo>
+					<todoId>todoId12</todoId>
+					<description>todo 12 description</description>
+					<priority>12</priority>
+				</todo>
+			</todos>
+		</todoList>
+		<todoList>
+			<listId>listId2</listId>
+			<name>todoList2</name>
+			<todos>
+				<todo>
+					<todoId>todoId21</todoId>
+					<description>todo 21 description</description>
+					<priority>21</priority>
+				</todo>
+				<todo>
+					<todoId>todoId22</todoId>
+					<description>todo 22 description</description>
+					<priority>22</priority>
+				</todo>
+			</todos>
+		</todoList>
+	</todoLists>
+</user>

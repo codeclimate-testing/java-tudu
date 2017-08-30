@@ -1,0 +1,29 @@
+                                ----------
+                                JBoss setup
+                                ---------
+                                Julien Dubois
+ 
+JBoss setup
+
+* Introduction
+
+  Tudu Lists is focused on the {{{tomcat_setup.html}Tomcat application server}}, which is our only
+  officially supported application server.
+  
+  However, making Tudu Lists work on JBoss is very easy, and should work just the same (as JBoss is
+  using Tomcat as its servlet container).
+
+* JDK and JBoss installation
+
+  Tudu Lists is a JDK 5.0 application : download and install the JDK 5.0 from {{http://java.sun.com}}.
+
+  Tudu Lists works with JBoss 4.0 : download and install JBoss 4.0 from {{http://www.jboss.com/}}.
+  
+* Web application installation
+
+  Copy the tudu-dwr.war file into the JBoss server/deploy/ directory :
+
++---+
+cp $TUDU_HOME/tudu.war $JBOSS_HOME/server/deploy
++---+
+

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>tudu</groupId>
+		<artifactId>tudu-presentation</artifactId>
+		<version>2.3</version>
+	</parent>
+	<artifactId>tudu-jsf</artifactId>
+	<packaging>war</packaging>
+	<name>Tudu Lists JSF</name>
+	<properties>
+		<wtpversion>1.5</wtpversion>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>tudu</groupId>
+			<artifactId>tudu-core</artifactId>
+			<version>${pom.version}</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>tudu-jsf</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<configuration>
+					<locales>en</locales>
+					<templateFile>../../src/site/tudu-site-skin-sub-subproject.vm</templateFile>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,29 @@
+                                ----------
+                                Tomcat setup
+                                ---------
+                                Julien Dubois
+ 
+Tomcat setup
+
+* Introduction
+
+  Tudu Lists is a standard WAR application, which should run on any Java EE 5-compliant 
+  application server (in fact, we have seen it working with Jetty, JBoss, Resin and Geronimo).
+
+  However, developement is focused on the Tomcat application server as it's the most 
+  commonly used application server.
+
+* JDK and Tomcat installation
+
+  Tudu Lists is a JDK 5.0 application : download and install the JDK 5.0 from {{http://java.sun.com}}. Newer
+  versions of Java (Java 6.0 for example) should also work without any problem.
+
+  Tudu Lists works great with Tomcat 6.0 : download and install Tomcat 6.0 from {{http://tomcat.apache.org/}}.
+
+* Web application installation
+
+  Copy the tudu-dwr.war file into the Tomcat webapps/ directory :
+
++---+
+cp $TUDU_HOME/tudu.war $TOMCAT_HOME/webapps
++---+

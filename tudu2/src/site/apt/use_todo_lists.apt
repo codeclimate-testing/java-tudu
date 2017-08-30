@@ -1,0 +1,24 @@
+                                ----------
+                                Using Todo Lists
+                                ---------
+                                Julien Dubois
+ 
+Using Todo Lists
+
+* Adding / Viewing / Deleting Todo Lists
+
+  Those actions are available in the left menu.
+
+[images/edit_todo_list_small.png]
+
+  {{{images/edit_todo_list.png}View larger image}}
+
+* Sharing Todo Lists
+
+  Todo Lists can be shared amongst users: just click on the "share current list" link, and 
+  add or remove users.
+
+[images/share_todo_list_small.png]
+
+  {{{images/share_todo_list.png}View larger image}}
+  

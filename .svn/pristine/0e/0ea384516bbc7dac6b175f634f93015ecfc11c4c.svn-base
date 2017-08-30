@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="urlMap">
+			<map>
+				<entry key="/WSSP/TodoListService">
+					<ref bean="todoListWSSPWebService" />
+				</entry>
+				<entry key="/WSSP/UserService">
+					<ref bean="userWSSPWebService" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="abstractWebService"
+		class="org.codehaus.xfire.spring.remoting.XFireExporter"
+		abstract="true">
+		<description>
+			Parent bean definition of all Web Services
+		</description>
+		<property name="serviceFactory">
+			<ref bean="jaxb2ServiceFactory" />
+		</property>
+		<property name="xfire">
+			<ref bean="xfire" />
+		</property>
+	</bean>
+
+
+
+	<bean id="abstractWSSPWebService" abstract="true"
+		parent="abstractWebService">
+		<description>
+			Parent bean definition of all Web Services with WS-Security
+			authentication and plain password
+		</description>
+		<property name="inHandlers">
+			<list>
+				<bean class="org.codehaus.xfire.util.dom.DOMInHandler" />
+				<bean
+					class="tudu.web.ws.xfire.security.handler.SetupCallbackToContextHandler">
+					<property name="passwordCallbackHandler">
+						<bean
+							class="tudu.web.ws.xfire.security.callback.PlainPasswordCallbackHandler">
+							<property name="authenticationManager">
+								<ref bean="authenticationManager" />
+							</property>
+						</bean>
+					</property>
+				</bean>
+				<bean
+					class="org.codehaus.xfire.security.wss4j.WSS4JInHandler">
+					<property name="properties">
+						<props>
+							<prop key="action">UsernameToken</prop>
+							<prop key="passwordCallbackRef">
+								tudu.web.ws.xfire.security.callback.PlainPasswordCallbackHandler
+							</prop>
+						</props>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="todoListWSSPWebService" parent="abstractWSSPWebService">
+		<description>
+			Todo list Web Service with WS-Security authentication and
+			digest password
+		</description>
+		<property name="serviceBean">
+			<ref bean="todoListsService" />
+		</property>
+	</bean>
+
+	<bean id="userWSSPWebService" parent="abstractWSSPWebService">
+		<description>
+			User Web Service with WS-Security authentication and plain
+			password
+		</description>
+		<property name="serviceBean">
+			<ref bean="userService" />
+		</property>
+	</bean>
+
+	<bean name="jaxb2ServiceFactory"
+		class="org.codehaus.xfire.jaxb2.JaxbServiceFactory">
+		<description>JAXB 2.0 service factory</description>
+		<constructor-arg ref="xfire.transportManager" />
+	</bean>
+
+</beans>

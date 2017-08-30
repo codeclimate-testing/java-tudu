@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>tudu</groupId>
+		<artifactId>tudu-parent</artifactId>
+		<version>2.3</version>
+	</parent>
+	<artifactId>tudu-ws</artifactId>
+	<packaging>pom</packaging>
+	<name>Tudu Lists Web Services</name>
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.4</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>tomcat-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<configuration>
+					<locales>en</locales>
+					<templateFile>../src/site/tudu-site-skin-subproject.vm</templateFile>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<modules>
+		<module>tudu-axis</module>
+		<module>tudu-axis-client</module>
+		<module>tudu-xfire</module>
+	</modules>
+</project>

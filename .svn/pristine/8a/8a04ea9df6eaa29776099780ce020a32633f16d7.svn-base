@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>tudu</groupId>
+	<artifactId>tudu-parent</artifactId>
+	<name>Tudu Lists</name>
+	<version>3.0</version>
+	<packaging>pom</packaging>
+	<description>
+		A Web application for managing todo lists.
+	</description>
+	<url>http://sourceforge.net/projects/tudu/
+	</url>
+	<issueManagement>
+		<system>SourceForge</system>
+		<url>http://sourceforge.net/tracker/?group_id=131842
+		</url>
+	</issueManagement>
+	<inceptionYear>2005</inceptionYear>
+	<repositories>
+		<repository>
+			<id>com.springsource.repository.bundles.release
+			</id>
+			<name>SpringSource Enterprise Bundle Repository -
+				SpringSource Bundle Releases</name>
+			<url>http://repository.springsource.com/maven/bundles/release
+			</url>
+		</repository>
+		<repository>
+			<id>com.springsource.repository.bundles.external
+			</id>
+			<name>SpringSource Enterprise Bundle Repository -
+				External Bundle Releases</name>
+			<url>http://repository.springsource.com/maven/bundles/external
+			</url>
+		</repository>
+		<repository>
+			<id>com.springsource.repository.libraries.release
+			</id>
+			<name>SpringSource Enterprise Bundle Repository -
+				SpringSource Library Releases</name>
+			<url>http://repository.springsource.com/maven/libraries/release
+			</url>
+		</repository>
+		<repository>
+			<id>com.springsource.repository.libraries.external
+			</id>
+			<name>SpringSource Enterprise Bundle Repository -
+				External Library Releases</name>
+			<url>http://repository.springsource.com/maven/libraries/external
+			</url>
+		</repository>
+	</repositories>
+	<developers>
+		<developer>
+			<name>Julien Dubois</name>
+			<id>roullian</id>
+			<email></email>
+			<url>http://www.julien-dubois.com</url>
+			<organization></organization>
+		</developer>
+	</developers>
+	<licenses>
+		<license>
+			<name>GNU General Public License</name>
+			<url>http://www.gnu.org/licenses/gpl.txt
+			</url>
+		</license>
+	</licenses>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>
+					maven-project-info-reports-plugin
+				</artifactId>
+				<reportSets>
+					<reportSet>
+						<reports>
+							<report>dependencies</report>
+							<report>project-team</report>
+							<report>issue-tracking</report>
+							<report>license</report>
+							<report>scm</report>
+						</reports>
+					</reportSet>
+				</reportSets>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<configuration>
+					<linkXref>true</linkXref>
+					<targetJdk>1.5</targetJdk>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>surefire-report-maven-plugin
+				</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jxr-maven-plugin</artifactId>
+				<configuration>
+					<aggregate>true</aggregate>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+	<scm>
+		<connection>
+			scm:svn:https://tudu.svn.sourceforge.net/svnroot/tudu/trunk/sandbox/tudu-dm
+		</connection>
+		<developerConnection>
+			scm:svn:https://tudu.svn.sourceforge.net/svnroot/tudu/trunk/sandbox/tudu-dm
+		</developerConnection>
+		<url>http://tudu.svn.sourceforge.net/viewvc/tudu/trunk/sandbox/tudu-dm/
+		</url>
+	</scm>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<descriptor>src/main/assembly/distribution.xml
+					</descriptor>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<inherited>true</inherited>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<configuration>
+					<locales>en</locales>
+					<templateFile>src/site/tudu-site-skin.vm
+					</templateFile>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<modules>
+		<module>tudu-domain</module>
+		<module>tudu-repository</module>
+		<module>tudu-service</module>
+		<module>tudu-dwr</module>
+	</modules>
+</project>

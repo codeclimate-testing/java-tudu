@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>tudu</groupId>
+		<artifactId>tudu-parent</artifactId>
+		<version>3.0</version>
+	</parent>
+	<artifactId>tudu-domain</artifactId>
+	<packaging>jar</packaging>
+	<name>Tudu Lists domain objects</name>
+	<dependencies>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>org.hibernate.ejb-library
+			</artifactId>
+			<type>libd</type>
+			<version>3.3.2.GA</version>
+		</dependency>
+	</dependencies>
+</project>
+

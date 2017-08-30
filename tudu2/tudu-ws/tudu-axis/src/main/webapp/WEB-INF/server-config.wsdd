@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<deployment xmlns="http://xml.apache.org/axis/wsdd/"
+	xmlns:wsdd="http://xml.apache.org/axis/wsdd/"
+	xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+	<globalConfiguration>
+		<parameter value="admin" name="adminPassword" />
+		<parameter value="org.apache.axis.attachments.AttachmentsImpl"
+			name="attachments.implementation" />
+		<parameter value="true" name="sendXsiTypes" />
+		<parameter value="true" name="sendMultiRefs" />
+		<parameter value="true" name="axis.development.system" />
+		<parameter value="true" name="sendXMLDeclaration" />
+		<parameter value="true" name="axis.sendMinimizedElements" />
+		<parameter value="true" name="dotNetSoapEncFix" />
+		<parameter value="false" name="sendMultiRefs" />
+		<requestFlow>
+			<handler type="java:org.apache.axis.handlers.JWSHandler">
+				<parameter value="session" name="scope" />
+			</handler>
+			<handler type="java:org.apache.axis.handlers.JWSHandler">
+				<parameter value="request" name="scope" />
+				<parameter value=".jwr" name="extension" />
+			</handler>
+		</requestFlow>
+	</globalConfiguration>
+
+	<handler type="java:org.apache.axis.transport.local.LocalResponder"
+		name="LocalResponder" />
+	<handler type="java:org.apache.axis.handlers.http.URLMapper"
+		name="URLMapper" />
+	<handler
+		type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"
+		name="Authenticate" />
+
+	<service provider="java:RPC" name="Version">
+		<parameter value="getVersion" name="allowedMethods" />
+		<parameter value="org.apache.axis.Version" name="className" />
+	</service>
+
+	<!-- Services from AxisTuduListsService WSDL service -->
+
+	<service name="TuduListsWebService" provider="java:RPC" style="rpc"
+		use="encoded">
+		<parameter name="wsdlTargetNamespace"
+			value="http://axis.ws.web.tudu" />
+		<parameter name="wsdlServiceElement"
+			value="AxisTuduListsService" />
+		<parameter name="schemaUnqualified"
+			value="http://bean.ws.web.tudu,http://axis.ws.web.tudu" />
+		<parameter name="wsdlServicePort" value="TuduListsWebService" />
+		<parameter name="className"
+			value="tudu.web.ws.axis.TuduListsWebServiceSoapBindingImpl" />
+		<parameter name="wsdlPortType" value="AxisTuduLists" />
+		<parameter name="typeMappingVersion" value="1.2" />
+		<operation name="getAllTodoLists" qname="operNS:getAllTodoLists"
+			xmlns:operNS="http://axis.ws.web.tudu"
+			returnQName="getAllTodoListsReturn"
+			returnType="rtns:ArrayOf_tns1_WsTodoList"
+			xmlns:rtns="http://axis.ws.web.tudu" returnItemType="tns2:WsTodoList"
+			xmlns:tns2="http://bean.ws.web.tudu" soapAction="" />
+
+		<operation name="getTodosByTodoList"
+			qname="operNS:getTodosByTodoList"
+			xmlns:operNS="http://axis.ws.web.tudu"
+			returnQName="getTodosByTodoListReturn"
+			returnType="rtns:ArrayOf_tns1_WsTodo"
+			xmlns:rtns="http://axis.ws.web.tudu" returnItemType="tns2:WsTodo"
+			xmlns:tns2="http://bean.ws.web.tudu" soapAction="">
+			<parameter qname="in0" type="tns:string"
+				xmlns:tns="http://www.w3.org/2001/XMLSchema" />
+		</operation>
+		<parameter name="allowedMethods"
+			value="getTodosByTodoList getAllTodoLists" />
+
+		<arrayMapping xmlns:ns="http://axis.ws.web.tudu"
+			qname="ns:ArrayOf_tns1_WsTodo" type="java:tudu.web.ws.bean.WsTodo[]"
+			innerType="cmp-ns:WsTodo" xmlns:cmp-ns="http://bean.ws.web.tudu"
+			encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+		<typeMapping xmlns:ns="http://bean.ws.web.tudu"
+			qname="ns:WsTodoList" type="java:tudu.web.ws.bean.WsTodoList"
+			serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+			deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+			encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+		<typeMapping xmlns:ns="http://bean.ws.web.tudu"
+			qname="ns:WsTodo" type="java:tudu.web.ws.bean.WsTodo"
+			serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+			deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+			encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+		<arrayMapping xmlns:ns="http://axis.ws.web.tudu"
+			qname="ns:ArrayOf_tns1_WsTodoList"
+			type="java:tudu.web.ws.bean.WsTodoList[]"
+			innerType="cmp-ns:WsTodoList" xmlns:cmp-ns="http://bean.ws.web.tudu"
+			encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+	</service>
+
+	<transport name="http">
+		<requestFlow>
+			<handler type="URLMapper" />
+			<handler
+				type="java:org.apache.axis.handlers.http.HTTPAuthHandler" />
+		</requestFlow>
+	</transport>
+
+	<transport name="local">
+		<responseFlow>
+			<handler type="LocalResponder" />
+		</responseFlow>
+	</transport>
+</deployment>

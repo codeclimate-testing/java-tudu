@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+   xmlns="http://www.springframework.org/schema/osgi"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:beans="http://www.springframework.org/schema/beans"
+   xsi:schemaLocation="http://www.springframework.org/schema/osgi  
+       http://www.springframework.org/schema/osgi/spring-osgi.xsd
+       http://www.springframework.org/schema/beans   
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<service ref="userManager" interface="tudu.service.UserManager"/>
+	<service ref="userDetailsService" interface="org.springframework.security.userdetails.UserDetailsService"/>
+    <service ref="todoListsManager" interface="tudu.service.TodoListsManager"/>
+    <service ref="todosManager" interface="tudu.service.TodosManager"/>
+    <service ref="configurationManager" interface="tudu.service.ConfigurationManager"/>
+
+	<reference id="userDAO" interface="tudu.domain.dao.UserDAO"/>
+    <reference id="roleDAO" interface="tudu.domain.dao.RoleDAO"/>
+    <reference id="todoListDAO" interface="tudu.domain.dao.TodoListDAO"/>
+    <reference id="todoDAO" interface="tudu.domain.dao.TodoDAO"/>
+    <reference id="propertyDAO" interface="tudu.domain.dao.PropertyDAO"/>
+
+	<reference id="transactionManager" interface="org.springframework.transaction.PlatformTransactionManager"/>
+</beans:beans>  

@@ -1,0 +1,48 @@
+                                ----------
+                                Tudu Lists
+                                ---------
+                                Julien Dubois
+
+Welcome to the Tudu Lists development website
+
+  Tudu Lists is the example application for "Spring par la pratique".
+  
+  <<Note to French readers>> Si vous avez achete le livre, {{{/lecteurs.html}une page speciale lui est consacre}}.
+  
+  "(...) the authors commitment to providing a realistic sample application (rather than the
+  simplistic effort that mars many books), is shown by the fact that Tudu Lists has become a viable
+  open source project in its own right" -- Rod Johnson, Founder of the Spring Framework
+  
+[images/spring_par_la_pratique_small.gif] Spring par la pratique
+
+  "Spring par la pratique" is the first book on <<Spring 2.0>>, and the first <<French>> book on Spring.
+  
+  You can find it on :
+  
+  * {{{http://www.eyrolles.com/Accueil/Livre/9782212117103/}Eyrolles.com}}, with freely downloadable sample chapters
+  
+  * {{{http://www.amazon.fr/gp/product/2212117108?ie=UTF8&tag=julidubo-21&linkCode=as2&camp=1642&creative=6746&creativeASIN=2212117108}Amazon.fr}}
+
+Using Tudu Lists
+
+  Tudu Lists is an on-line application for managing todo lists. With Tudu Lists, 
+  todo lists can be easily accessed, edited and shared on the Web. It is a simple
+  but effective project management tool.
+
+  If you want to use Tudu Lists, go to {{http://tudu.ess.ch}}, which provides a 
+  free installation for everyone to use. Many thanks to {{{http://www.ess.ch}ESS Development AG}}
+  for this service.
+
+[images/view_todos_small.png] View Todos
+
+  {{{images/view_todos.png}View larger image}}
+
+[images/add_todo_small.png] View Todos
+
+  {{{images/add_todo.png}View larger image}}
+
+[images/share_todo_list_small.png]
+
+  {{{images/share_todo_list.png}View larger image}}
+  
+  

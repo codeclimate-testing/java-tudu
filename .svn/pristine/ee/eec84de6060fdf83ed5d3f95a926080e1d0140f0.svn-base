@@ -1,0 +1,52 @@
+                                ----------
+                                Architecture
+                                ---------
+                                Julien Dubois
+
+Architecture
+
+* Introduction
+
+  Tudu Lists is a three-layer Web application which uses best practices from the 
+  {{{http://www.springframework.com}Spring Framework}} in order to achieve better 
+  modularity, testability and performance.
+  	
+* Persistance layer
+
+  Tudu Lists uses the Java Persistance API (JPA) in order to persist Java objects 
+  in relational databases. More specifically, it uses the {{{http://www.hibernate.org}Hibernate}}
+  ORM engine to achieve this persistance.
+  
+  This allows Tudu Lists to work with a number of different databases (see the 
+  {{{database_setup.html}database setup page}}).
+  
+  Here is a graphical representation of Tudu Lists database schema :
+  
+[images/database_graph_small.png] Database schema
+
+  {{{images/database_graph.png}View larger image}}
+  
+* Service layer
+
+  Tudu Lists uses Spring to manage business objects in the service layer.
+  
+  Here is a graphical representation of the Spring beans in the 
+  {{{tudu-core/index.html}tudu-core}} module :
+  
+[images/tudu-core_spring_beans_graph_small.png] tudu-core Spring beans graph
+
+  {{{images/tudu-core_spring_beans_graph.png}View larger image}}
+  
+* Presentation layer
+
+  Several different presentation layers can be plugged on top of the Tudu Lists service
+  layer. The default one uses {{{http://struts.apache.org}Struts}} as its MVC2 framework and
+  {{{http://getahead.org/dwr}DWR}} for doing AJAX calls.
+  
+  Here is a graphical representation of the Spring beans in the 
+  {{{tudu-presentation/tudu-dwr/index.html}tudu-dwr}} module :
+  
+[images/tudu-dwr_spring_beans_graph_small.png] tudu-dwr Spring beans graph
+
+  {{{images/tudu-dwr_spring_beans_graph.png}View larger image}}
+  

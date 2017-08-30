@@ -1,0 +1,11 @@
+                                ----------
+                                Tudu Lists
+                                ---------
+                                Julien Dubois
+
+Tudu Lists presentation layer
+
+  Tudu Lists' classical presentation layer is made with {{{http://www.getahead.ltd.uk/dwr/}DWR}}, an Open Source AJAX framework. 
+  But as the project is well-divided into different modules, several other presentation layers are available, like 
+  Spring MVC, Spring Web Flow, {{{http://www.adobe.com/products/flex/}Flex}} or {{{http://code.google.com/webtoolkit/}Google Web Toolkit}}).
+

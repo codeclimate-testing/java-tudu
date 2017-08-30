@@ -1,0 +1,1 @@
+@java -cp "src/main/java;bin;gwt-installation/gwt-user.jar;gwt-installation/gwt-dev-windows.jar" com.google.gwt.dev.GWTCompiler -out "src/main/webapp" %* tudu.web.gwt.TuduGwt

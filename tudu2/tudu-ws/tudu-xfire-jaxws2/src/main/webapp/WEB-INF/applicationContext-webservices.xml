@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<description>Web Services related beans</description>
+
+	<bean id="abstractService" abstract="true">
+		<description>Parent bean of all exposed services</description>
+		<property name="userManager">
+			<ref bean="userManager" />
+		</property>
+		<property name="mapper">
+			<ref bean="dozerMapper" />
+		</property>
+	</bean>
+
+	<bean id="todoListsService"
+		class="tudu.web.ws.xfire.service.impl.TodoListsServiceImpl"
+		parent="abstractService">
+		<description>TodoLists service</description>
+		<property name="todoListsManager">
+			<ref bean="todoListsManager" />
+		</property>
+		<property name="todosManager">
+			<ref bean="todosManager" />
+		</property>
+	</bean>
+
+	<bean id="userService"
+		class="tudu.web.ws.xfire.service.impl.UserServiceImpl"
+		parent="abstractService">
+		<description>User service</description>
+	</bean>
+
+	<bean id="dozerMapper"
+		class="net.sf.dozer.util.mapping.DozerBeanMapper">
+		<description>
+			Mapper between domain objects and SDOs
+		</description>
+		<property name="mappingFiles">
+			<list>
+				<value>dozerBeanMapping.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 
+		The TodoListsService has to be in the transaction in order to get acces lazy-loaded	collections.
+		If it was not in the transaction, hibernate session would be closed when mapping objects to XML.
+	-->
+	<aop:config>
+		<aop:advisor
+			pointcut="execution(* tudu.web.ws.xfire.service.TodoListsService.*(..))"
+			advice-ref="txWebService" />
+	</aop:config>
+
+	<tx:advice id="txWebService">
+		<tx:attributes>
+			<tx:method name="create*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />			
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="get*" propagation="REQUIRED" read-only="true" />
+			<tx:method name="find*" propagation="REQUIRED" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+
+</beans>

@@ -1,0 +1,36 @@
+<project name="Axis web service generator" default="generate" basedir=".">
+    <description>
+        Generate an Axis Web Service with the axis-ant tasks.
+    </description>
+
+  <target name="generate">
+	<path id="axis.classpath">
+		<pathelement path="${basedir}/../../../target/classes"/>
+		<fileset
+			dir="${user.home}/.m2/repository/">
+			<include name="javax/activation/**/*.jar" />
+			<include name="javax/mail/**/*.jar" />
+			<include name="axis/**/*.jar" />
+			<include name="commons-logging/**/*.jar" />
+			<include name="commons-discovery/**/*.jar" />
+		</fileset>
+	</path>
+	<taskdef
+		resource="axis-tasks.properties" classpathref="axis.classpath" />
+	<axis-java2wsdl 
+		classname="tudu.web.ws.axis.AxisTuduLists"
+		output="${basedir}/AxisTuduListsWebService.wsdl"
+		namespace="http://axis.ws.web.tudu"
+		location="http://127.0.0.1:8080/tudu/ws/axis/TuduListsWebService">
+
+	</axis-java2wsdl>
+  	<axis-wsdl2java 
+  		output="${basedir}/generated-sources"
+  		testcase="false"
+  		serverside="true"
+  		url="${basedir}/AxisTuduListsWebService.wsdl"
+  		verbose="true">
+
+  	</axis-wsdl2java>
+  </target>
+</project>

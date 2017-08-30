@@ -1,0 +1,66 @@
+                                ----------
+                                Database setup
+                                ---------
+                                Julien Dubois
+
+Database setup
+
+* Introduction
+
+  Tudu Lists is using the {{{http://www.hibernate.org}Hibernate}} persistence layer, 
+  so it should work seamlessly on most databases (in fact, we have seen it working 
+  with Postgresql, MaxDB, HSQLDB and Oracle).
+
+  However, developement is focused on the MySQL database for the following reasons :
+
+    * It's Open Source,
+
+    * It's working on a lot of operating systems,
+  
+    * It's easy to install,
+  
+    * It's easy to develop on (a lot easier than Oracle),
+  
+    * It is ready for production (it's fast and cluster-ready).
+  
+* MySQL installation
+
+  Download MySQL at {{http://www.mysql.com/}}, and follow the instructions in order 
+  to install the database.
+  
+  If you're using Windows or Mac OS X, an easy-to-use graphical installer is provided.
+
+  If you're running Linux, chances are that MySQL is already running on your system, 
+  or that a simple "apt-get install mysql" will do the trick.
+
+* Database installation
+
+  Now that MySQL is installed, let's create the "tudu" database.
+
+  Using a graphical front-end could help for following the next steps. There are a lot 
+  of different front-ends for MySQL, but you could use :
+
+    * MySQL Query Browser : {{http://www.mysql.com/products/tools/query-browser/}}
+  
+    * CocoaMySQL (only works on Mac OS X, but is really great) : {{http://cocoamysql.sourceforge.net/}}
+
+  Now follow the next steps (we're using MySQL Query Browser in the screenshots) :
+
+  Step 1 : create the "tudu" schema.
+    
+[images/database_setup_1.png]
+
+  Step 2 : In the "tudu" database, open the create_schema_mysql.sql script. This script is provided in 
+  the "src/sql/" directory of each Tudu Lists distribution (Note that before version 1.1.1, is was in 
+  stored in the "sql/" directory). If you want the latest version of this script, it is available in the 
+  {{{http://cvs.sourceforge.net/viewcvs.py/tudu/tudu/src/sql/}CVS repository}}.
+  
+[images/database_setup_2.png]
+    
+  Step 3 : Execute the script (with MySQL Query Browser, click on the green "Execute" icon).
+    
+[images/database_setup_3.png]
+    
+  You should now have a ready-to-work version of the "tudu" database :
+
+[images/database_setup_final.png]

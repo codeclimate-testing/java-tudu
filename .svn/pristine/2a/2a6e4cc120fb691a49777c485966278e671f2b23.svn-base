@@ -1,0 +1,92 @@
+                                ----------
+                                Eclipse setup
+                                ---------
+                                Julien Dubois
+ 
+Eclipse setup
+
+* Introduction
+
+  Tudu Lists' official development platform is the {{{http://www.eclipse.org}Eclipse}} IDE. 
+  We have also been using {{{http://www.intellij.com/}Intellij IDEA}}, and you could probably 
+  develop Tudu Lists with any other Java editor, however we have decided that Eclipse is the 
+  official supported IDE, and we will focus exclusively on it. This means that Eclipse-specific 
+  configuration files will be stored in Subversion, and none other.
+
+* Getting the source code
+
+  Tudu Lists' source code is provided with every Tudu Lists distribution, just go to the 
+  {{{https://sourceforge.net/project/showfiles.php?group_id=131842}download page}} to get it.
+
+  If you want the latest, bleeding-edge source code, you will need to access our Subversion server :
+  {{{source-repository.html}here is how to access it}}. The current development version is 
+  {{{https://tudu.svn.sourceforge.net/svnroot/tudu/trunk/tudu2/}here}}.
+
+* Building the project
+
+  Once you got the source code, you will need to run Maven in order to download the project's 
+  dependencies.
+
+  Install Maven 2 from {{http://maven.apache.org/}} and open up a console in the directory containing
+  Tudu Lists' source code.
+  
+  Type "mvn install" to download all dependencies and install Tudu Lists into your local Maven
+  repository.
+  
+  Once this "mvn install" command is finished running, Tudu Lists is built on your system.
+  
+  Now go into the directory of the presentation layer you want to use ("tudu-presentation/tudu-dwr" 
+  is the one you will probably want) and type "mvn war:inplace". This creates an "exploded war" structure
+  that will allow you to develop your application more easily (no need to repackage the war every time).
+
+* Installing Tomcat
+
+  {{{tomcat_setup.html}Tomcat}} is used for developing Tudu Lists.
+  
+  Install a Tomcat server (see {{{tomcat_setup.html}here}} for installing Tomcat on a production
+  server), but do not install Tudu Lists yet into that server.
+  
+* Configuring Eclipse
+
+  Launch Eclipse.
+
+  Add an Eclipse "classpath variable" : go to Window > Preferences, and select Java > 
+  Build Path > Classpath variables. Create a new variable called "M2_REPO", which points to 
+  your local Maven repository (by default ~/.m2/repository).
+  
+  Import Tudu Lists' modules into the Eclipse workspace : go to File > Import, and select 
+  General > Existing Projects into Workspace. In the next screen, select your Tudu Lists' source 
+  code installation directory in the "Select root directory" input field. 
+  
+  You should at least import the "tudu-core" project, which contains the Tudu Lists core code, 
+  and one of the presentation layers (the "tudu-dwr" project contains the default presentation
+  layer, and is probably the one you're looking for).
+    
+  Everything should compile without any problem. Otherwise, you can use Maven to do a 
+  "mvn eclipse:eclipse", which will generate a new Eclipse configuration from the Maven 
+  descriptor files.
+
+* Eclipse Web Tools Platform
+
+  The Eclipse Web Tools Platform (WTP) is an Eclipse plugin, available on the 
+  {{{http://www.eclipse.org}Eclipse website}}, which helps creating web applications. For instance, 
+  it adds JSP and XML support, and integrates with several application servers, including Tomcat and Geronimo.
+
+  We are officially supporting WTP, and will commit any relevant configuration files into Subversion.
+   
+* Spring IDE
+
+  {{{http://springide.org}Spring IDE}} is an Eclipse plugin that helps developing Spring-based
+  applications.
+  
+  We highly recommand this plugin, and we will also commit its configuration files into
+  Subversion.
+  
+* Running Tudu Lists
+  
+  Using Eclipse's WTP plugin, create a new Tomcat server : Window > Show View > Servers
+  
+  Add the presentation layer you want to use ("tudu-dwr" for example) on that server.
+  
+  Just run the server, Tudu Lists should start up automatically.
+  

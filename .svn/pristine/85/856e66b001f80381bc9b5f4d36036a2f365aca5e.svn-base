@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cache-entry>
+	<generated-type-hash class="com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException_FieldSerializer" hash="FF198044879E67E1ACF2E0C29CC58CB5"/>
+	<generated-type-hash class="tudu.web.gwt.client.TuduGwtRemoteService_TypeSerializer" hash="2AC4B6F69120678DF12B0AFD77F46988"/>
+	<generated-type-hash class="tudu.web.gwt.client.TuduGwtRemoteService_Proxy" hash="7E3E88FBCA9F0B0CA02ACA6DDAA61420"/>
+	<generated-type-hash class="tudu.web.gwt.client.SerializableTodo_FieldSerializer" hash="3824E75DB07CC362C4999946B7C57198"/>
+	<generated-type-hash class="tudu.web.gwt.client.SerializableTodoList_FieldSerializer" hash="9CFBE19F2662C9A667616E7E774301D3"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.TextBoxImpl" out="com.google.gwt.user.client.ui.impl.TextBoxImpl"/>
+	<rebind-decision in="com.google.gwt.user.client.impl.HTTPRequestImpl" out="com.google.gwt.user.client.impl.HTTPRequestImpl"/>
+	<rebind-decision in="com.google.gwt.user.client.impl.DOMImpl" out="com.google.gwt.user.client.impl.DOMImplMozilla"/>
+	<rebind-decision in="com.google.gwt.user.client.impl.HistoryImpl" out="com.google.gwt.user.client.impl.HistoryImplMozilla"/>
+	<rebind-decision in="tudu.web.gwt.client.TuduGwt" out="tudu.web.gwt.client.TuduGwt"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.ListBox.Impl" out="com.google.gwt.user.client.ui.ListBox.Impl"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.FormPanelImpl" out="com.google.gwt.user.client.ui.impl.FormPanelImpl"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.ClippedImageImpl" out="com.google.gwt.user.client.ui.impl.ClippedImageImpl"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.FocusImpl" out="com.google.gwt.user.client.ui.impl.FocusImpl"/>
+	<rebind-decision in="com.google.gwt.user.client.ui.impl.PopupImpl" out="com.google.gwt.user.client.ui.impl.PopupImplMozilla"/>
+	<rebind-decision in="tudu.web.gwt.client.TuduGwtRemoteService" out="tudu.web.gwt.client.TuduGwtRemoteService_Proxy"/>
+</cache-entry>

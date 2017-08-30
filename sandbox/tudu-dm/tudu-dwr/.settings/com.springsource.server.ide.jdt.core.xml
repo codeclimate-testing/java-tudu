@@ -1,0 +1,591 @@
+<classpath>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/usr/com.springsource.com.sun.syndication-0.9.0.jar" sourcepath="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/usr/com.springsource.com.sun.syndication-sources-0.9.0.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="com/sun/syndication/*"/>
+		<accessrule kind="accessible" pattern="com/sun/syndication/feed/*"/>
+		<accessrule kind="accessible" pattern="com/sun/syndication/feed/atom/*"/>
+		<accessrule kind="accessible" pattern="com/sun/syndication/feed/impl/*"/>
+		<accessrule kind="accessible" pattern="com/sun/syndication/feed/module/*"/>
+		<accessrule kind="accessible" pattern="com/sun/syndication/feed/module/impl/*"/>
+		<accessrule kind="accessible" pattern="com/sun/syndication/feed/rss/*"/>
+		<accessrule kind="accessible" pattern="com/sun/syndication/feed/synd/*"/>
+		<accessrule kind="accessible" pattern="com/sun/syndication/feed/synd/impl/*"/>
+		<accessrule kind="accessible" pattern="com/sun/syndication/io/*"/>
+		<accessrule kind="accessible" pattern="com/sun/syndication/io/impl/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/usr/com.springsource.javax.servlet.jsp.jstl-1.2.0.jar" sourcepath="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/usr/com.springsource.javax.servlet.jsp.jstl-sources-1.2.0.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="javax/servlet/jsp/jstl/core/*"/>
+		<accessrule kind="accessible" pattern="javax/servlet/jsp/jstl/fmt/*"/>
+		<accessrule kind="accessible" pattern="javax/servlet/jsp/jstl/sql/*"/>
+		<accessrule kind="accessible" pattern="javax/servlet/jsp/jstl/tlv/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/extra/spath/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/functions/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/lang/jstl/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/lang/jstl/parser/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/lang/jstl/test/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/lang/jstl/test/beans/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/lang/support/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/resources/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/tag/common/core/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/tag/common/fmt/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/tag/common/sql/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/tag/common/xml/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/tag/el/core/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/tag/el/fmt/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/tag/el/sql/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/tag/el/xml/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/tag/rt/core/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/tag/rt/fmt/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/tag/rt/sql/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/tag/rt/xml/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/tei/*"/>
+		<accessrule kind="accessible" pattern="org/apache/taglibs/standard/tlv/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/usr/com.springsource.net.sf.navigator-2.4.3.jar" sourcepath="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/usr/com.springsource.net.sf.navigator-sources-2.4.3.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="net/sf/navigator/displayer/*"/>
+		<accessrule kind="accessible" pattern="net/sf/navigator/menu/*"/>
+		<accessrule kind="accessible" pattern="net/sf/navigator/taglib/*"/>
+		<accessrule kind="accessible" pattern="net/sf/navigator/taglib/el/*"/>
+		<accessrule kind="accessible" pattern="net/sf/navigator/util/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/ext/com.springsource.org.aopalliance-1.0.0.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/aopalliance/aop/*"/>
+		<accessrule kind="accessible" pattern="org/aopalliance/intercept/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/usr/com.springsource.org.apache.struts-1.2.9.jar" sourcepath="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/usr/com.springsource.org.apache.struts-sources-1.2.9.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/apache/struts/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/action/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/actions/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/config/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/config/impl/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/plugins/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/resources/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/taglib/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/taglib/bean/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/taglib/html/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/taglib/logic/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/taglib/nested/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/taglib/nested/bean/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/taglib/nested/html/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/taglib/nested/logic/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/taglib/tiles/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/taglib/tiles/util/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/tiles/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/tiles/actions/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/tiles/beans/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/tiles/definition/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/tiles/xmlDefinition/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/upload/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/util/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/validator/*"/>
+		<accessrule kind="accessible" pattern="org/apache/struts/validator/validwhen/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/ext/com.springsource.org.aspectj.runtime-1.6.1.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/aspectj/internal/lang/annotation/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/internal/lang/reflect/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/lang/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/lang/annotation/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/lang/internal/lang/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/lang/reflect/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/runtime/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/runtime/internal/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/runtime/internal/cflowstack/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/runtime/reflect/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/ext/com.springsource.org.aspectj.weaver-1.6.1.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/aspectj/apache/bcel/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/apache/bcel/classfile/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/apache/bcel/classfile/annotation/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/apache/bcel/generic/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/apache/bcel/util/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/asm/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/asm/internal/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/bridge/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/bridge/context/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/util/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/weaver/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/weaver/ast/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/weaver/bcel/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/weaver/internal/tools/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/weaver/loadtime/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/weaver/loadtime/definition/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/weaver/ltw/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/weaver/patterns/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/weaver/reflect/*"/>
+		<accessrule kind="accessible" pattern="org/aspectj/weaver/tools/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/usr/com.springsource.org.directwebremoting-2.0.4.jar" sourcepath="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/usr/com.springsource.org.directwebremoting-sources-2.0.4.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/directwebremoting/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/annotations/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/beehive/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/contrib/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/convert/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/create/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/dwrp/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/extend/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/faces/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/filter/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/fluent/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/guice/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/guice/spring/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/hibernate/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/impl/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/proxy/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/proxy/dwr/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/proxy/scriptaculous/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/servlet/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/spring/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/struts/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/util/*"/>
+		<accessrule kind="accessible" pattern="org/directwebremoting/webwork/*"/>
+		<accessrule kind="accessible" pattern="uk/ltd/getahead/dwr/*"/>
+		<accessrule kind="accessible" pattern="uk/ltd/getahead/dwr/compat/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/ext/org.springframework.aop-2.5.6.A.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/springframework/aop/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/aop/aspectj/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/aop/aspectj/annotation/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/aop/aspectj/autoproxy/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/aop/config/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/aop/framework/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/aop/framework/adapter/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/aop/framework/autoproxy/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/aop/framework/autoproxy/target/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/aop/interceptor/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/aop/scope/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/aop/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/aop/support/annotation/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/aop/target/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/aop/target/dynamic/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/ext/org.springframework.aspects-2.5.6.A.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/springframework/beans/factory/aspectj/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/transaction/aspectj/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/ext/org.springframework.beans-2.5.6.A.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/springframework/beans/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/beans/annotation/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/beans/factory/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/beans/factory/access/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/beans/factory/access/el/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/beans/factory/annotation/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/beans/factory/config/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/beans/factory/generic/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/beans/factory/parsing/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/beans/factory/serviceloader/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/beans/factory/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/beans/factory/wiring/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/beans/factory/xml/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/beans/propertyeditors/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/beans/support/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/ext/org.springframework.context-2.5.6.A.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/springframework/context/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/context/access/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/context/annotation/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/context/config/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/context/event/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/context/i18n/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/context/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/context/weaving/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/ejb/access/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/ejb/config/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/ejb/interceptor/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/ejb/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/instrument/classloading/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/instrument/classloading/glassfish/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/instrument/classloading/oc4j/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/instrument/classloading/weblogic/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jmx/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jmx/access/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jmx/export/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jmx/export/annotation/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jmx/export/assembler/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jmx/export/metadata/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jmx/export/naming/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jmx/export/notification/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jmx/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jndi/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jndi/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/remoting/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/remoting/rmi/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/remoting/soap/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/remoting/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/scheduling/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/scheduling/backportconcurrent/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/scheduling/concurrent/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/scheduling/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/scheduling/timer/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/scripting/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/scripting/bsh/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/scripting/config/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/scripting/groovy/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/scripting/jruby/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/scripting/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/stereotype/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/ui/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/ui/context/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/ui/context/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/validation/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/validation/support/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/ext/org.springframework.context.support-2.5.6.A.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/springframework/cache/ehcache/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/mail/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/mail/javamail/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/scheduling/commonj/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/scheduling/quartz/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/ui/freemarker/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/ui/jasperreports/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/ui/velocity/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/ext/org.springframework.core-2.5.6.A.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/springframework/asm/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/asm/commons/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/asm/signature/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/core/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/core/annotation/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/core/enums/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/core/io/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/core/io/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/core/style/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/core/task/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/core/task/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/core/type/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/core/type/classreading/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/core/type/filter/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/metadata/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/metadata/commons/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/util/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/util/comparator/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/util/xml/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/ext/org.springframework.jdbc-2.5.6.A.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/springframework/jdbc/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jdbc/core/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jdbc/core/metadata/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jdbc/core/namedparam/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jdbc/core/simple/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jdbc/core/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jdbc/datasource/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jdbc/datasource/lookup/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jdbc/object/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jdbc/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jdbc/support/incrementer/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jdbc/support/lob/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jdbc/support/nativejdbc/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jdbc/support/rowset/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jdbc/support/xml/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/ext/org.springframework.jms-2.5.6.A.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/springframework/jms/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jms/config/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jms/connection/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jms/core/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jms/core/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jms/listener/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jms/listener/adapter/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jms/listener/endpoint/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jms/listener/serversession/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jms/remoting/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jms/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jms/support/converter/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jms/support/destination/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/ext/org.springframework.orm-2.5.6.A.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/springframework/orm/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/orm/hibernate3/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/orm/hibernate3/annotation/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/orm/hibernate3/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/orm/ibatis/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/orm/ibatis/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/orm/jdo/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/orm/jdo/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/orm/jpa/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/orm/jpa/persistenceunit/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/orm/jpa/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/orm/jpa/vendor/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/orm/toplink/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/orm/toplink/support/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/usr/org.springframework.security-2.0.4.A.jar" sourcepath="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/usr/org.springframework.security-sources-2.0.4.A.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/springframework/security/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/acl/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/acl/basic/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/acl/basic/cache/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/acl/basic/jdbc/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/adapters/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/afterinvocation/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/authoritymapping/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/concurrent/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/config/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/context/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/context/httpinvoker/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/context/rmi/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/event/authentication/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/event/authorization/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/intercept/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/intercept/method/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/intercept/method/aopalliance/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/intercept/method/aspectj/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/intercept/web/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ldap/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ldap/populator/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ldap/search/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/anonymous/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/dao/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/dao/cache/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/dao/salt/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/encoding/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/jaas/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/jaas/event/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/ldap/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/ldap/authenticator/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/preauth/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/rcp/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/rememberme/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/x509/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/x509/cache/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/providers/x509/populator/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/runas/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/securechannel/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/token/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ui/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ui/basicauth/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ui/digestauth/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ui/logout/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ui/preauth/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ui/preauth/header/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ui/preauth/j2ee/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ui/preauth/websphere/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ui/preauth/x509/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ui/rememberme/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ui/savedrequest/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ui/session/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ui/switchuser/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ui/webapp/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/ui/x509/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/userdetails/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/userdetails/checker/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/userdetails/hierarchicalroles/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/userdetails/jdbc/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/userdetails/ldap/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/userdetails/memory/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/util/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/vote/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/security/wrapper/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/ext/org.springframework.transaction-2.5.6.A.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/springframework/dao/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/dao/annotation/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/dao/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jca/cci/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jca/cci/connection/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jca/cci/core/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jca/cci/core/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jca/cci/object/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jca/context/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jca/endpoint/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jca/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jca/work/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jca/work/glassfish/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/jca/work/jboss/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/transaction/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/transaction/annotation/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/transaction/config/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/transaction/interceptor/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/transaction/jta/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/transaction/support/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/ext/org.springframework.web-2.5.6.A.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/springframework/remoting/caucho/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/remoting/httpinvoker/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/remoting/jaxrpc/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/remoting/jaxrpc/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/remoting/jaxws/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/context/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/context/request/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/context/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/filter/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/jsf/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/jsf/el/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/util/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry kind="lib" path="C:/springsource/dmserver/springsource-dm-server-1.0.1.RELEASE/repository/bundles/ext/org.springframework.web.servlet-2.5.6.A.jar">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="org/springframework/web/bind/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/bind/annotation/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/bind/annotation/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/bind/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/multipart/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/multipart/commons/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/multipart/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/handler/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/handler/metadata/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/i18n/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/mvc/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/mvc/annotation/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/mvc/multiaction/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/mvc/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/mvc/throwaway/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/support/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/tags/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/tags/form/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/theme/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/view/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/view/document/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/view/freemarker/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/view/jasperreports/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/view/tiles2/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/view/velocity/*"/>
+		<accessrule kind="accessible" pattern="org/springframework/web/servlet/view/xslt/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry combineaccessrules="false" kind="src" path="/tudu-domain">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="tudu/domain/*"/>
+		<accessrule kind="accessible" pattern="tudu/domain/model/*"/>
+		<accessrule kind="accessible" pattern="tudu/domain/model/comparator/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+<classpathentry combineaccessrules="false" kind="src" path="/tudu-service">
+	<attributes>
+		<attribute name="com.springsource.server.ide.jdt.core.CLASSPATH_ENTRY" value="true"/>
+	</attributes>
+	<accessrules>
+		<accessrule kind="accessible" pattern="tudu/service/*"/>
+		<accessrule ignoreifbetter="true" kind="nonaccessible" pattern="**/*"/>
+	</accessrules>
+</classpathentry>
+</classpath>

@@ -1,0 +1,30 @@
+                                ----------
+                                Installation introduction
+                                ---------
+                                Julien Dubois
+ 
+Installation introduction
+
+* Installation of a Tudu Lists server
+
+  In order to install a Tudu Lists server, you will need :
+  
+    * {{{https://sourceforge.net/project/showfiles.php?group_id=131842}A Tudu Lists distribution}}
+    
+    * {{{database_setup.html}A database}}
+    
+    * A J2EE server : either {{{tomcat_setup.html}Tomcat}} or {{{jboss_setup.html}JBoss}}
+    
+* Installation of a Tudu Lists development environnement
+
+  As Tudu Lists is also an example application, you might want to set up a developement environnement.
+  In that case, you will need :
+
+    * {{{https://sourceforge.net/project/showfiles.php?group_id=131842}A Tudu Lists distribution}}
+    
+    * {{{database_setup.html}A database}}
+    
+    * A J2EE server : either {{{tomcat_setup.html}Tomcat}} or {{{jboss_setup.html}JBoss}}
+    
+    * {{{eclipse_setup.html}A development platform}}
+  

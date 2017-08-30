@@ -1,0 +1,36 @@
+                                ----------
+                                User Management
+                                ---------
+                                Julien Dubois
+                                
+User management
+
+* Logging in
+
+  Connect to your Tudu Lists installation - if you have installed Tudu Lists on your computer 
+  (as explained in the "setup" documents), the default URL is {{http://127.0.0.1:8080/tudu-dwr/}}.
+  
+[images/user_login_small.png] View Todos
+
+  {{{images/user_login.png}View larger image}}
+  
+  If you do not already have a user name and password, click on the "register" tab, and create a new user.
+  
+  Once your user is created, log in using your user name and your password. If you select the "remember me" box, 
+  you will be automatically logged in for the next 30 days.
+  
+* Application Administration
+
+  There is an administrion account, which default user name/password is "admin/admin". This user has access
+  to an "Administration" page, for configuring the application.
+  
+  He also has access to a "monitoring" page, which gives statistical information about the application's
+  performance.
+  
+* Editing user information
+
+  Select the "My Info" tab in the upper menu bar, and update your user information.
+
+[images/user_edit_small.png] View Todos
+
+  {{{images/user_edit.png}View larger image}}

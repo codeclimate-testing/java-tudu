@@ -1,0 +1,9 @@
+                                ----------
+                                Tudu Lists
+                                ---------
+                                Julien Dubois
+
+Tudu Lists presentation layer, portlet implementation
+
+  This is the {{{http://jcp.org/en/jsr/detail?id=168}Portlet}} implementation of Tudu Lists' presentation layer.
+

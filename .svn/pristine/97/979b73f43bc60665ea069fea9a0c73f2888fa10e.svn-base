@@ -1,0 +1,5 @@
+com.google.gwt.user.client.rpc.IncompatibleRemoteServiceException, true
+java.lang.String, true
+java.util.ArrayList, true
+java.util.Vector, true
+tudu.web.gwt.client.SerializableTodo, true

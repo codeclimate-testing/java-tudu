@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <bean name="/welcome" class="tudu.web.WelcomeAction"></bean>
+	<bean name="/register" class="tudu.web.RegisterAction">
+		<property name="userManager">
+			<ref bean="userManager" />
+		</property>
+	</bean>
+	<bean name="/recoverPassword" class="tudu.web.RecoverPasswordAction">
+		<property name="userManager">
+			<ref bean="userManager" />
+		</property>
+	</bean>
+	<bean name="/logout" class="tudu.web.LogoutAction"></bean>
+	<bean name="/secure/myInfo" class="tudu.web.MyInfoAction">
+		<property name="userManager">
+			<ref bean="userManager" />
+		</property>
+	</bean>
+	<bean name="/secure/showTodos" class="tudu.web.ShowTodosAction">
+		<property name="userManager">
+			<ref bean="userManager" />
+		</property>
+	</bean>
+	<bean name="/secure/backupTodoList" class="tudu.web.BackupTodoListAction">
+		<property name="todoListsManager">
+			<ref bean="todoListsManager" />
+		</property>
+	</bean>
+	<bean name="/secure/restoreTodoList" class="tudu.web.RestoreTodoListAction">
+		<property name="todoListsManager">
+			<ref bean="todoListsManager" />
+		</property>
+	</bean>
+	<bean name="/rss/showRssFeed"
+		class="tudu.web.ShowRssFeedAction">
+		<property name="todoListsManager">
+			<ref bean="todoListsManager" />
+		</property>
+	</bean>
+	<bean name="/secure/admin/administration"
+		class="tudu.web.AdministrationAction">
+		<property name="configurationManager">
+			<ref bean="configurationManager" />
+		</property>
+		<property name="userManager">
+			<ref bean="userManager" />
+		</property>
+	</bean>
+	
+	<!--  Struts Menu configuration -->
+	<bean id="menu" class="net.sf.navigator.menu.MenuLoader">
+		<property name="menuConfig">
+			<value>/WEB-INF/menu-config.xml</value>
+		</property>
+	</bean>
+</beans>

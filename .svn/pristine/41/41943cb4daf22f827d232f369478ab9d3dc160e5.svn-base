@@ -1,0 +1,9 @@
+                                ----------
+                                Tudu Lists
+                                ---------
+                                Julien Dubois
+
+Tudu Lists presentation layer, portlet implementation
+
+  This is the {{{http://opensource.atlassian.com/confluence/spring/display/WEBFLOW/Home/}Spring Web Flow}} implementation of Tudu Lists' presentation layer.
+

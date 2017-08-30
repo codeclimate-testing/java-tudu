@@ -1,0 +1,94 @@
+                                ----------
+                                Database setup
+                                ---------
+                                Julien Dubois
+
+Database setup
+
+* Introduction
+
+  Tudu Lists uses the {{{http://www.hibernate.org}Hibernate}} persistence layer, 
+  so it should work seamlessly on most databases (in fact, we have seen it working 
+  with MySQL, Postgresql, 
+  {{{https://sourceforge.net/tracker/index.php?func=detail&aid=1678621&group_id=131842&atid=722410}MS SQL Server}}, 
+  HSQLDB and Oracle).
+
+  However, developement is focused on the HSLQDB and MySQL databases :
+  
+  	* HSQLDB is used as an in-memroy database for developement. This means that all the
+  	data is lost each time the server is shut down.
+  	
+  	* MySQL is used in production. This time, of course, data is saved on the filesystem, 
+  	and it survives the application shut down.
+  	
+* HSQLDB installation
+
+  {{{http://www.hsqldb.org/}HSQLDB}} is bundled into Tudu Lists, and is automatically 
+  launched at application start up, if MySQL is not found.
+  
+  So there is nothing to do (excepted shutting down MySQL if you also have a production database
+  running).
+    
+* MySQL installation
+
+  Download MySQL at {{http://www.mysql.com/}}, and follow the instructions in order 
+  to install the database.
+  
+  If you're using Windows or Mac OS X, an easy-to-use graphical installer is provided.
+
+  If you're running Linux, chances are that MySQL is already running on your system, 
+  or that a simple "apt-get install mysql" will do the trick.
+
+  Now that MySQL is installed, let's create the "tudu" database.
+
+  Using a graphical front-end could help for following the next steps. There are a lot 
+  of different front-ends for MySQL, but you could use :
+
+    * MySQL Query Browser : {{http://www.mysql.com/products/tools/query-browser/}}
+  
+    * CocoaMySQL (only works on Mac OS X, but is really great) : {{http://cocoamysql.sourceforge.net/}}
+
+  Now follow the next steps (we're using MySQL Query Browser in the screenshots) :
+
+  Step 1 : create the "tudu" schema.
+    
+[images/database_setup_1.png]
+
+  Step 2 : In the "tudu" database, open the create_schema_mysql.sql script. This script is provided in 
+  the "sql/" directory of the Tudu Lists distribution (Note that before Tudu Lists 2.0, it was
+  located in the "src/sql" directory, and that before version 1.1.1, is was in   stored in the "sql/"
+  directory). If you want the latest version of this script, it is available in the
+  {{{http://svn.sourceforge.net/viewvc/tudu/trunk/tudu2/tudu-core/src/main/sql/}Subversion repository}}.
+  
+[images/database_setup_2.png]
+    
+  Step 3 : Execute the script (with MySQL Query Browser, click on the green "Execute" icon).
+    
+[images/database_setup_3.png]
+    
+  You should now have a ready-to-work version of the "tudu" database :
+
+[images/database_setup_final.png]
+
+  Tudu Lists searches the MySQL instance in 2 different ways :
+  
+    * Firstly, it looks for the "jdbc/tudu" JNDI name, and it will use this database if it finds it. For
+    more information on how to configure a JNDI name in Tomcat, please read the Tomcat documentation.
+    
+    * Secondly, it tries to connect to MySQL using its default configuration (username = "root", password 
+    = "", schema = "tudu") : if you haven't modified the default settings, it will work automatically.
+
+  If you want to use this second option, and if you have changed something in the default configuration 
+  (your password, for example), then you will have to edit the applicationContext-jpa.xml configuration file.
+
+  This file is located inside the Tudu Lists web application :
+
+    * if you're using the tudu-XX-XX.war file, unzip this file and look inside the WEB-INF/lib directory. This
+    directory contains a tudu-core-XX-XX.jar file, which in turn contains the applicationContext-jpa.xml file
+    inside its tudu/domain directory.
+
+    * if you're building the War file yourself, have a look inside the tudu-core/src/main/resources/tudu/domain directory.
+
+  The datasource configuration is at the beginning of this file : it is a commons-dbcp datasource configuration,
+  you can find information on all those settings on the
+  {{{http://jakarta.apache.org/commons/dbcp/}Commons DBCP website}}.

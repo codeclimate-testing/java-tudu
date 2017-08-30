@@ -1,0 +1,3 @@
+#!/bin/sh
+APPDIR=`dirname $0`;
+java -XstartOnFirstThread -cp "$APPDIR/src/main/java:$APPDIR/bin:gwt-installation/gwt-user.jar:gwt-installation/gwt-dev-mac.jar" com.google.gwt.dev.GWTCompiler -out "src/main/webapp" "$@" tudu.web.gwt.TuduGwt;

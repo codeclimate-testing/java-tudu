@@ -1,0 +1,29 @@
+                                ----------
+                                Using Todos
+                                ---------
+                                Julien Dubois
+ 
+Using Todos
+
+  Select one of the Todo Lists on the left menu. The list can be easily updated or reordered :
+
+[images/view_todos_small.png] View Todos
+
+  {{{images/view_todos.png}View larger image}}
+
+  This list of todos has the following properties :
+
+    * It is automatically refreshed every 2 minutes
+
+    * It can be shared amongst users (see the {{{use_todo_lists.html}Use Todo Lists}} document)
+
+    * It automatically reoders Todos according to their completion, priority and description
+
+    * It can be subscribed to via RSS (for example with the Firefox Web browser)
+
+  Adding a Todo is done by clicking on the "Add" button :
+
+[images/add_todo_small.png] View Todos
+
+  {{{images/add_todo.png}View larger image}}
+  

@@ -1,0 +1,10 @@
+                                ----------
+                                Tudu Lists
+                                ---------
+                                Julien Dubois
+
+Tudu Lists Web Services layer
+
+  Tudu Lists can be exposed as a set of Web Services with several different frameworks.
+  We are currently working with {{{http://xfire.codehaus.org/}XFire}} and {{{http://ws.apache.org/axis//}Axis}}, two of the most popular ones.
+

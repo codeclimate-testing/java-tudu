@@ -1,0 +1,10 @@
+Bundle-SymbolicName: tudu.domain
+Bundle-Version: 1.0.0
+Bundle-Name: tudu-domain
+Bundle-ManifestVersion: 2
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Library: org.hibernate.ejb;version="[3.3.2.GA,3.3.2.GA]"
+Import-Bundle: com.springsource.javax.persistence;version="[1.0.0,1.0.0]"
+Export-Package: tudu.domain,
+ tudu.domain.model,
+ tudu.domain.model.comparator

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<!-- ======================== FILTER CHAIN ======================= -->
+	<bean id="filterChainProxy"
+		class="org.acegisecurity.util.FilterChainProxy">
+		<property name="filterInvocationDefinitionSource">
+			<value>
+				CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+				PATTERN_TYPE_APACHE_ANT
+				/tudu.web.gwt.tudugwt/secure/**=httpSessionContextIntegrationFilter,basicProcessingFilter,contextHolderAwareRequestFilter,exceptionTranslationFilter,filterSecurityInterceptor
+			</value>
+		</property>
+	</bean>
+	
+	<!-- ===================== httpSessionContextIntegrationFilter ==================== -->
+	<bean id="httpSessionContextIntegrationFilter"
+		class="org.acegisecurity.context.HttpSessionContextIntegrationFilter">
+		<property name="context">
+			<value>
+				org.acegisecurity.context.SecurityContextImpl
+			</value>
+		</property>
+	</bean>
+	
+	<!-- ===================== contextHolderAwareRequestFilter ==================== -->
+	<bean id="contextHolderAwareRequestFilter"
+		class="org.acegisecurity.wrapper.SecurityContextHolderAwareRequestFilter" />
+		
+	<!-- ===================== basicProcessingFilter ==================== -->
+	<bean id="basicProcessingFilter" class="org.acegisecurity.ui.basicauth.BasicProcessingFilter">
+  		<property name="authenticationManager"><ref bean="authenticationManager"/></property>
+  		<property name="authenticationEntryPoint"><ref bean="basicAuthenticationEntryPoint"/></property>
+	</bean>
+
+	<bean id="basicAuthenticationEntryPoint" class="org.acegisecurity.ui.basicauth.BasicProcessingFilterEntryPoint">
+  		<property name="realmName"><value>Tudu Lists Realm</value></property>
+	</bean>
+		
+	<bean id="authenticationManager"
+		class="org.acegisecurity.providers.ProviderManager">
+		<property name="providers">
+			<list>
+				<ref bean="daoAuthenticationProvider" />
+			</list>
+		</property>
+	</bean>
+	
+	<!-- ===================== exceptionTranslationFilter ==================== -->
+	<bean id="exceptionTranslationFilter"
+		class="org.acegisecurity.ui.ExceptionTranslationFilter">
+		<property name="authenticationEntryPoint">
+			<ref local="basicAuthenticationEntryPoint" />
+		</property>
+	</bean>
+			
+	<!-- Note the order that entries are placed against the objectDefinitionSource is critical.
+		The FilterSecurityInterceptor will work from the top of the list down to the FIRST pattern that matches the request URL.
+		Accordingly, you should place MOST SPECIFIC (ie a/b/c/d.*) expressions first, with LEAST SPECIFIC (ie a/.*) expressions last -->
+	<bean id="filterSecurityInterceptor"
+		class="org.acegisecurity.intercept.web.FilterSecurityInterceptor">
+		<property name="authenticationManager">
+			<ref local="authenticationManager" />
+		</property>
+		<property name="accessDecisionManager">
+			<ref bean="accessDecisionManager" />
+		</property>
+		<property name="objectDefinitionSource">
+			<value>
+				CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+				PATTERN_TYPE_APACHE_ANT
+				/tudu.web.gwt.tudugwt/secure/**=ROLE_USER
+			</value>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,63 @@
+                                ----------
+                                Tomcat setup
+                                ---------
+                                Julien Dubois
+ 
+Tomcat setup
+
+* Introduction
+
+  Tudu Lists is a standard WAR application, which should run on any J2EE 1.4-compliant 
+  application server (in fact, we have seen it working with JBoss, Resin and Geronimo).
+
+  However, developement is focused on the Tomcat application server for the following
+  reasons :
+
+    * It's Open Source,
+    
+    * It's easy to install,
+
+    * It's easy to develop on (easier than WebSphere),
+
+    * It is ready for production (it is relatively fast and it is cluster-ready).
+
+* JDK and Tomcat installation
+
+  Tudu Lists is a JDK 5.0 application : download and install the JDK 5.0 from {{http://java.sun.com}}.
+
+  Tudu Lists works with Tomcat 5.5 : download and install Tomcat 5.5 from {{http://jakarta.apache.org/tomcat/}}.
+
+  <<Important :>> Tomcat needs some more JARs into the common/lib directory. Those JARs are 
+  located into Tudu Lists' conf/tomcat/5.5/common/lib directory.
+
+  Copy those JARs :
+
++---+
+cp $TUDU_HOME/conf/tomcat/5.5/common/lib/* $TOMCAT_HOME/common/lib
++---+
+  
+  For your information, those JARs are the Java Transaction API (jta.jar), the JavaMail API (mail.jar), the 
+  Java Activation Framework API (activation.jar), and MySQL's JDBC driver (mysql-connector-java-3.1.7-bin.jar).
+
+* Web application installation
+
+  Copy the tudu.war file into the Tomcat webapps/ directory :
+
++---+
+cp $TUDU_HOME/tudu.war $TOMCAT_HOME/webapps
++---+
+  
+  <<Important :>> We deliver Tudu Lists on Sourceforge as a "tudu-XX.XX.war" file (XX.XX being the version number).
+  You must rename this file as  "tudu.war" if you want the following configuration file to work (or alternatively, 
+  you can keep the tudu-XX.XX.war name, and change the configuration file). We're keeping this naming convention in
+  order to be able to have different versions of Tudu Lists running in the same Tomcat server.
+
+  Copy the Tudu Lists configuration file into the conf/Catalina/localhost directory :
+
++---+
+cp $TUDU_HOME/conf/tomcat/5.5/conf/Catalina/localhost/tudu.xml $TOMCAT_HOME/conf/Catalina/localhost
++---+
+  
+  This configuration file contains information about the database connection : it should be edited in order 
+  to customize the database user, password, url, etc...
+
